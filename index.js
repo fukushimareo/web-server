@@ -25,6 +25,7 @@ app.post("/api/v1/quize", function (req, res) {
     }
 
 });
-app.listen(3000,function(){
+const PORT = process.env.PORT || 3000;//herokuを使うときはheroku指定のポート番号、ローカルでは3000
+app.listen(PORT,function(){
     console.log("running");
 });
